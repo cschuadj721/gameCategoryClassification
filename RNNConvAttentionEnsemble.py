@@ -89,10 +89,10 @@ def create_model(vocab_size, embedding_dim, max_len, num_classes):
 if __name__ == "__main__":
 
     # 2.1 Load the prepared datasets
-    X_train = np.load('./news_data_X_train.npy', allow_pickle=True)
-    Y_train = np.load('./news_data_Y_train.npy', allow_pickle=True)
-    X_test = np.load('./news_data_X_test.npy', allow_pickle=True)
-    Y_test = np.load('./news_data_Y_test.npy', allow_pickle=True)
+    X_train = np.load('./filtered_reviews_X_train.npy', allow_pickle=True)
+    Y_train = np.load('./filtered_reviews_Y_train.npy', allow_pickle=True)
+    X_test = np.load('./filtered_reviews_X_test.npy', allow_pickle=True)
+    Y_test = np.load('./filtered_reviews_Y_test.npy', allow_pickle=True)
 
     print('X_train shape:', X_train.shape, 'Y_train shape:', Y_train.shape)
     print('X_test shape:', X_test.shape, 'Y_test shape:', Y_test.shape)

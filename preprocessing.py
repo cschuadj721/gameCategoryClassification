@@ -112,10 +112,10 @@ print("Training Data Shape:", X_train.shape, Y_train.shape)
 print("Testing Data Shape:", X_test.shape, Y_test.shape)
 
 # Save processed data
-np.save('./datasets/news_data_X_train.npy', X_train)
-np.save('./datasets/news_data_Y_train.npy', Y_train)
-np.save('./datasets/news_data_X_test.npy', X_test)
-np.save('./datasets/news_data_Y_test.npy', Y_test)
+np.save('datasets/filtered_reviews_X_train.npy', X_train)
+np.save('datasets/filtered_reviews_Y_train.npy', Y_train)
+np.save('datasets/filtered_reviews_X_test.npy', X_test)
+np.save('datasets/filtered_reviews_Y_test.npy', Y_test)
 
 # exit()
 #
