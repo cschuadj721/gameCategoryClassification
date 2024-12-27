@@ -9,10 +9,10 @@ print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 exit()
 
 # Load the prepared datasets
-X_train = np.load('./datasets/news_data_X_train.npy')
-Y_train = np.load('./datasets/news_data_Y_train.npy')
-X_test = np.load('./datasets/news_data_X_test.npy')
-Y_test = np.load('./datasets/news_data_Y_test.npy')
+X_train = np.load('datasets/filtered_reviews_X_train.npy')
+Y_train = np.load('datasets/filtered_reviews_Y_train.npy')
+X_test = np.load('datasets/filtered_reviews_X_test.npy')
+Y_test = np.load('datasets/filtered_reviews_Y_test.npy')
 
 with open('./models/tokenizer.pickle', 'rb') as f:
     tokenizer = pickle.load(f)
@@ -73,10 +73,10 @@ print(f"Test Accuracy: {accuracy}")
 # exit()
 
 # Load the prepared datasets
-# X_train = np.load('./news_data_X_train.npy')
-# Y_train = np.load('./news_data_Y_train.npy')
-# X_test = np.load('./news_data_X_test.npy')
-# Y_test = np.load('./news_data_Y_test.npy')
+# X_train = np.load('./filtered_reviews_X_train.npy')
+# Y_train = np.load('./filtered_reviews_Y_train.npy')
+# X_test = np.load('./filtered_reviews_X_test.npy')
+# Y_test = np.load('./filtered_reviews_Y_test.npy')
 #
 # # Vocabulary size and maximum sequence length
 # vocab_size = X_train.max() + 1  # Assuming tokenizer indices are used, max index + 1 gives vocab size

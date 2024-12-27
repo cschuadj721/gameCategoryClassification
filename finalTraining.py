@@ -93,10 +93,10 @@ def create_model(vocab_size, embedding_dim, max_len, num_classes):
 
 
 if __name__ == "__main__":
-    X_train = np.load('./datasets/news_data_X_train.npy', allow_pickle=True)
-    Y_train = np.load('./datasets/news_data_Y_train.npy', allow_pickle=True)
-    X_test = np.load('./datasets/news_data_X_test.npy', allow_pickle=True)
-    Y_test = np.load('./datasets/news_data_Y_test.npy', allow_pickle=True)
+    X_train = np.load('datasets/filtered_reviews_X_train.npy', allow_pickle=True)
+    Y_train = np.load('datasets/filtered_reviews_Y_train.npy', allow_pickle=True)
+    X_test = np.load('datasets/filtered_reviews_X_test.npy', allow_pickle=True)
+    Y_test = np.load('datasets/filtered_reviews_Y_test.npy', allow_pickle=True)
 
     print('X_train shape:', X_train.shape, 'Y_train shape:', Y_train.shape)
     print('X_test shape:', X_test.shape, 'Y_test shape:', Y_test.shape)
@@ -117,7 +117,7 @@ if __name__ == "__main__":
 
     # Define callbacks
     checkpoint_cb = ModelCheckpoint(
-        filepath='./best_news_model.keras',
+        filepath='./best_model.keras',
         monitor='val_accuracy',
         save_best_only=True,
         mode='max',
@@ -152,6 +152,6 @@ if __name__ == "__main__":
     print(f"Test Accuracy: {score[1]:.4f}")
 
     # Save the model in .h5 format
-    model.save('./models/final_model-2.h5', save_format='h5')
+    model.save('./models/final_model.h5', save_format='h5')
 
     print(f"Model saved as final_model.h5")

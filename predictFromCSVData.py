@@ -209,7 +209,7 @@ def main(new_csv_path, model_path, tokenizer_path, encoder_path, max_length=297,
 
 if __name__ == "__main__":
     # Define paths
-    NEW_CSV_PATH = './datasets/filtered_reviews_with_word_count_200-300.csv'  # Replace with your new CSV file path
+    NEW_CSV_PATH = './datasets/filtered_reviews_with_word_count_500plus.csv'  # Replace with your new CSV file path
     MODEL_PATH = './models/final_model.h5'
     TOKENIZER_PATH = './models/tokenizer.pickle'
     ENCODER_PATH = './models/encoder.pickle'
