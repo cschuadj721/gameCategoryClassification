@@ -2,10 +2,12 @@
 
 ## 디렉토리구조
 ### gameCategoryClassification (루트 폴더)
-###   datasets(하위 폴더)
+###     datasets(하위 폴더)
+###     models(하위 폴더)
 
 ### **파이선 파일들은루트 폴더에 복사
 ### **csv파일들은 datasets 폴더에 복사
+### **.h5파일과 모델관련 파일들은 models 폴더에 복사
 
 ## .py 파일설명(알파벳 순서)
 ### addWordCount.py(csv파일에 단어수 추가)
